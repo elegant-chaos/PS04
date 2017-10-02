@@ -68,50 +68,50 @@ RMSE_test <- rep(0,7)
 model1.1 <- lm(model1_formula, data = credit_train)
 predictionsTrain1.1 <- predict(model1.1, credit_train)
 predictionsTest1.1 <- predict(model1.1, credit_test)
-RMSE_test[1] <- sqrt(sum((predictionsTest1.1-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[1] <- sqrt(sum((predictionsTrain1.1-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[1] <- sqrt(sum((credit_test$Balance-predictionsTest1.1)^2)/length(credit_test$Balance))
+RMSE_train[1] <- sqrt(sum((credit_train$Balance-predictionsTrain1.1)^2)/length(credit_train$Balance))
 
 #Model2 
 model1.2 <- lm(model2_formula, data = credit_train)
 predictionsTrain1.2 <- predict(model1.2, credit_train)
 predictionsTest1.2 <- predict(model1.2, credit_test)
-RMSE_test[2] <- sqrt(sum((predictionsTest1.2-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[2] <- sqrt(sum((predictionsTrain1.2-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[2] <- sqrt(sum((credit_test$Balance-predictionsTest1.2)^2)/length(credit_test$Balance))
+RMSE_train[2] <- sqrt(sum((credit_train$Balance-predictionsTrain1.2)^2)/length(credit_train$Balance))
 
 #Model3 
 model1.3 <- lm(model3_formula, data = credit_train)
 predictionsTrain1.3 <- predict(model1.3, credit_train)
 predictionsTest1.3 <- predict(model1.3, credit_test)
-RMSE_test[3] <- sqrt(sum((predictionsTest1.3-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[3] <- sqrt(sum((predictionsTrain1.3-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[3] <- sqrt(sum((credit_test$Balance-predictionsTest1.3)^2)/length(credit_test$Balance))
+RMSE_train[3] <- sqrt(sum((credit_train$Balance-predictionsTrain1.3)^2)/length(credit_train$Balance))
 
 #Model4 
 model1.4 <- lm(model4_formula, data = credit_train)
 predictionsTrain1.4 <- predict(model1.4, credit_train)
 predictionsTest1.4 <- predict(model1.4, credit_test)
-RMSE_test[4] <- sqrt(sum((predictionsTest1.4-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[4] <- sqrt(sum((predictionsTrain1.4-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[4] <- sqrt(sum((credit_test$Balance-predictionsTest1.4)^2)/length(credit_test$Balance))
+RMSE_train[4] <- sqrt(sum((credit_train$Balance-predictionsTrain1.4)^2)/length(credit_train$Balance))
 
 #Model5
 model1.5 <- lm(model5_formula, data = credit_train)
 predictionsTrain1.5 <- predict(model1.5, credit_train)
 predictionsTest1.5 <- predict(model1.5, credit_test)
-RMSE_test[5] <- sqrt(sum((predictionsTest1.5-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[5] <- sqrt(sum((predictionsTrain1.5-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[5] <- sqrt(sum((credit_test$Balance-predictionsTest1.5)^2)/length(credit_test$Balance))
+RMSE_train[5] <- sqrt(sum((credit_train$Balance-predictionsTrain1.5)^2)/length(credit_train$Balance))
 
 #Model6 
 model1.6 <- lm(model6_formula, data = credit_train)
 predictionsTrain1.6 <- predict(model1.6, credit_train)
 predictionsTest1.6 <- predict(model1.6, credit_test)
-RMSE_test[6] <- sqrt(sum((predictionsTest1.6-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[6] <- sqrt(sum((predictionsTrain1.6-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[6] <- sqrt(sum((credit_test$Balance-predictionsTest1.6)^2)/length(credit_test$Balance))
+RMSE_train[6] <- sqrt(sum((credit_train$Balance-predictionsTrain1.6)^2)/length(credit_train$Balance))
 
 #Model7 
 model1.7 <- lm(model7_formula, data = credit_train)
 predictionsTrain1.7 <- predict(model1.7, credit_train)
 predictionsTest1.7 <- predict(model1.7, credit_test)
-RMSE_test[7] <- sqrt(sum((predictionsTest1.7-credit_test$Balance)^2)/length(credit_test))
-RMSE_train[7] <- sqrt(sum((predictionsTrain1.7-credit_train$Balance)^2)/length(credit_train))
+RMSE_test[7] <- sqrt(sum((credit_test$Balance-predictionsTest1.7)^2)/length(credit_test$Balance))
+RMSE_train[7] <- sqrt(sum((credit_train$Balance-predictionsTrain1.7)^2)/length(credit_train$Balance))
 
 # Save results in a data frame. Note this data frame is in wide format.
 results <- data_frame(
@@ -169,50 +169,50 @@ RMSE_test2 <- rep(0,7)
 model2.1 <- lm(model1_formula, data = credit_train2)
 predictionsTrain2.1 <- predict(model2.1, credit_train2)
 predictionsTest2.1 <- predict(model2.1, credit_test2)
-RMSE_test2[1] <- sqrt(sum((predictionsTest2.1-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[1] <- sqrt(sum((predictionsTrain2.1-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[1] <- sqrt(sum((credit_test2$Balance-predictionsTest2.1)^2)/length(credit_test2$Balance))
+RMSE_train2[1] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.1)^2)/length(credit_train2$Balance))
 
 #Model2 
 model2.2 <- lm(model2_formula, data = credit_train2)
 predictionsTrain2.2 <- predict(model2.2, credit_train2)
 predictionsTest2.2 <- predict(model2.2, credit_test2)
-RMSE_test2[2] <- sqrt(sum((predictionsTest2.2-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[2] <- sqrt(sum((predictionsTrain2.2-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[2] <- sqrt(sum((credit_test2$Balance-predictionsTest2.2)^2)/length(credit_test2$Balance))
+RMSE_train2[2] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.2)^2)/length(credit_train2$Balance))
 
 #Model3 
 model2.3 <- lm(model3_formula, data = credit_train2)
 predictionsTrain2.3 <- predict(model2.3, credit_train2)
 predictionsTest2.3 <- predict(model2.3, credit_test2)
-RMSE_test2[3] <- sqrt(sum((predictionsTest2.3-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[3] <- sqrt(sum((predictionsTrain2.3-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[3] <- sqrt(sum((credit_test2$Balance-predictionsTest2.3)^2)/length(credit_test2$Balance))
+RMSE_train2[3] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.3)^2)/length(credit_train2$Balance))
 
 #Model4 
 model2.4 <- lm(model4_formula, data = credit_train2)
 predictionsTrain2.4 <- predict(model2.4, credit_train2)
 predictionsTest2.4 <- predict(model2.4, credit_test2)
-RMSE_test2[4] <- sqrt(sum((predictionsTest2.4-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[4] <- sqrt(sum((predictionsTrain2.4-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[4] <- sqrt(sum((credit_test2$Balance-predictionsTest2.4)^2)/length(credit_test2$Balance))
+RMSE_train2[4] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.4)^2)/length(credit_train2$Balance))
 
 #Model5
 model2.5 <- lm(model5_formula, data = credit_train2)
 predictionsTrain2.5 <- predict(model2.5, credit_train2)
 predictionsTest2.5 <- predict(model2.5, credit_test2)
-RMSE_test2[5] <- sqrt(sum((predictionsTest2.5-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[5] <- sqrt(sum((predictionsTrain2.5-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[5] <- sqrt(sum((credit_test2$Balance-predictionsTest2.5)^2)/length(credit_test2$Balance))
+RMSE_train2[5] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.5)^2)/length(credit_train2$Balance))
 
 #Model6 
 model2.6 <- lm(model6_formula, data = credit_train2)
 predictionsTrain2.6 <- predict(model2.6, credit_train2)
 predictionsTest2.6 <- predict(model2.6, credit_test2)
-RMSE_test2[6] <- sqrt(sum((predictionsTest2.6-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[6] <- sqrt(sum((predictionsTrain2.6-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[6] <- sqrt(sum((credit_test2$Balance-predictionsTest2.6)^2)/length(credit_test2$Balance))
+RMSE_train2[6] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.6)^2)/length(credit_train2$Balance))
 
 #Model7 
 model2.7 <- lm(model7_formula, data = credit_train2)
 predictionsTrain2.7 <- predict(model2.7, credit_train2)
 predictionsTest2.7 <- predict(model2.7, credit_test2)
-RMSE_test2[7] <- sqrt(sum((predictionsTest2.7-credit_test2$Balance)^2)/length(credit_test2))
-RMSE_train2[7] <- sqrt(sum((predictionsTrain2.7-credit_train2$Balance)^2)/length(credit_train2))
+RMSE_test2[7] <- sqrt(sum((credit_test2$Balance-predictionsTest2.7)^2)/length(credit_test2$Balance))
+RMSE_train2[7] <- sqrt(sum((credit_train2$Balance-predictionsTrain2.7)^2)/length(credit_train2$Balance))
 
 # Save results in a data frame. Note this data frame is in wide format.
 results2 <- data_frame(
